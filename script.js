@@ -1124,33 +1124,267 @@ console.log(newPeople);
 
 //User2
 
-let user = {
-  name: "Vlad",
-  adress: {
-    city: "Moscccow",
-    street: "Lenina",
-  },
-  greet() {
-    console.log(
-      `Меня зовут ${this.name}. Мой адрес: ${this.adress.city}, улица ${this.adress.street}, дом №${this.adress.house}`
-    );
-  },
-};
+// let user = {
+//   name: "Vlad",
+//   adress: {
+//     city: "Moscccow",
+//     street: "Lenina",
+//   },
+//   greet() {
+//     console.log(
+//       `Меня зовут ${this.name}. Мой адрес: ${this.adress.city}, улица ${this.adress.street}, дом №${this.adress.house}`
+//     );
+//   },
+// };
 
-// console.log(user.name);
-// console.log(user.adress.city);
-user.adress.city = "Moscow";
-user.adress.house = 5;
-user.adress.postcode = 100020;
-user.isActive = true;
-user.other = false;
-// console.log(user.adress);
+// // console.log(user.name);
+// // console.log(user.adress.city);
+// user.adress.city = "Moscow";
+// user.adress.house = 5;
+// user.adress.postcode = 100020;
+// user.isActive = true;
+// user.other = false;
+// // console.log(user.adress);
 
-let { name, adress, isActive, other } = user;
-let updUser = { name, adress, isActive, other };
-// console.log(updUser);
+// let { name, adress, isActive, other } = user;
+// let updUser = { name, adress, isActive, other };
+// // console.log(updUser);
 
-for (const key in user.adress) {
-  console.log(`${key}: ${user.adress[key]}`);
-}
-user.greet();
+// for (const key in user.adress) {
+//   console.log(`${key}: ${user.adress[key]}`);
+// }
+// user.greet();
+
+// Замыкания ***************
+
+// function greet() {
+//   let userName = "John";
+//   function sayHello() {
+//     console.log(`Hello, ${userName}`);
+//   }
+//   return sayHello();
+// }
+// greet();
+
+// let greet = () => {
+//   let userName = "John";
+//   let sayHello = () => console.log(`Hello, ${userName}`);
+//   sayHello();
+// };
+// greet();
+
+// function result(c, d) {
+//   let res3 = c + d;
+//   let res4 = c - d;
+
+//   function myFn(a, b) {
+//     let res1 = a + b;
+//     let res2 = a - b;
+//     console.log({ one: res1, two: res2 }); // Локальные значения res1 и res2
+//   }
+//   myFn(10, 90);
+//   return { one: res3, two: res4 };
+// }
+
+// let output = result(10, 20);
+// console.log(output.one);
+// console.log(output.two);
+
+/* "Прототипы объектов и наследование". Это ключевая концепция, которая объясняет, как объекты могут наследовать свойства и методы друг от друга.
+ */
+
+// let animal = {
+//   eats: true,
+//   walk() {
+//     console.log("Животное гуляет..");
+//   },
+//   sleep() {
+//     console.log("Животное спит...");
+//   },
+// };
+
+// let dog = Object.create(animal);
+
+// dog.barks = true;
+
+// console.log(dog.eats);
+// console.log(dog.barks);
+// dog.walk();
+// dog.sleep();
+// console.log(dog);
+
+// let person = {
+//   sayHi() {
+//     console.log("Hi! I am a person!");
+//   },
+// };
+
+// let student = Object.create(person);
+
+// student.study = function () {
+//   console.log("I am studying!");
+// };
+// student.sayHi();
+// student.study();
+
+// student.sayHi = function () {
+//   console.log("Hi! I am a person (parent method)!");
+// };
+
+// let teacher = Object.create(person);
+
+// teacher.teach = function () {
+//   console.log("I am teaching!");
+// };
+
+// teacher.sayHi();
+// teacher.teach();
+// student.sayHi();
+
+// let fruits = [
+//   { frName: "banana", frCountry: "Equador", frCost: 100 },
+
+//   { frName: "orange", frCountry: "Italy", frCost: 200 },
+
+//   { frName: "apple", frCountry: "Russia", frCost: 400 },
+// ];
+
+// fruits.forEach((element) => {
+//   console.log(element);
+// });
+// let myFruit = fruits[0];
+// console.log(myFruit.frName);
+
+//в
+
+//в
+
+// let btn = document.getElementById("button");
+// let menu = document.getElementsByClassName("menu")[0];
+// btn.innerText = "НАЖМИ МЕНЯ!";
+// btn.addEventListener("click", () => {
+//   let originalText = btn.innerText;
+//   const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+//   const randomBgColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
+//   setTimeout(() => {
+//     btn.classList.remove("button-green");
+//     btn.innerText = "Загрузка...";
+
+//     setTimeout(() => {
+//       btn.classList.add("button-green");
+//       btn.innerText = originalText;
+
+//       let text2 = document.createElement("div");
+//       let textArr = [
+//         "Ты справишься, верь в себя!",
+//         "Каждый день - новый шанс.",
+//         "Улыбнись, ты супер!",
+//         "Действуй, время на твоей стороне.",
+//         "Не бойся, просто сделай.",
+//         "Мечты превращаются в реальность.",
+//         "Двигайся к своим целям.",
+//         "Ты сильнее, чем думаешь.",
+//         "Сложности делают тебя лучше.",
+//         "Дорога осилится идущим.",
+//         "Смелость - твой путь к успеху.",
+//         "Не останавливайся на достигнутом.",
+//         "Будь уверен, будь собой.",
+//         "Каждый день приближает цель.",
+//         "Препятствия - часть пути.",
+//         "Думай позитивно, действуй уверенно.",
+//         "Ты можешь всё, поверь!",
+//         "Каждый шаг важен.",
+//         "Не сдавайся, продолжай стараться.",
+//         "Верь в процесс, всё придёт.",
+//         "Сосредоточься, ты на верном пути.",
+//         "Ты заслуживаешь большего!",
+//         "Действуй, успех любит смелых.",
+//         "Твой потенциал безграничен.",
+//         "Будь терпелив, всё получится.",
+//         "Желание исполнится",
+//         "Всё получится",
+//         "Всё будет хорошо",
+//       ];
+
+//       let randomIndex = Math.floor(Math.random() * textArr.length);
+//       text2.textContent = textArr[randomIndex];
+//       text2.style.color = randomColor;
+//       text2.style.backgroundColor = randomBgColor;
+//       text2.classList.add("text2");
+//       menu.appendChild(text2);
+
+//       setTimeout(() => {
+//         text2.classList.add("textHidden");
+//       }, 2500);
+//     }, 1000);
+//   }, 1);
+// });
+// let arr = [1, 3, 4, 5, 6, 67, 6, 3434, 3, 753, 998];
+// let result = sumArr(arr);
+
+// function sumArr(arr) {
+//   return arr.reduce((acummulator, currentNum) => {
+//     return acummulator + currentNum;
+//   }, 0);
+// }
+// sumArr(arr);
+// console.log(result);
+// let arr = [1, 3, 4, 5, 6, 67, 6, 3434, 3, 753, 998];
+
+// let result = arr.reduce((total, number) => total + number, 0);
+// console.log(result);
+
+// let newArr = arr.forEach((num, total) => {
+//   total += num;
+//   console.log(total);
+// });
+
+// let arr = [1, 233, 4, 5, 6, 67, 6, 3434, 3, 753, 998];
+// let res = arr.reduce((accum, index) => accum + index);
+// console.log(res);
+
+// let res = arr.forEach((el, numOfEl) => {
+//   numOfEl += 1;
+//   let res2 = `Число ${el}, а номер № ${numOfEl}`;
+//   console.log(res2);
+// });
+
+// let rndNum = Math.floor(Math.random() * 4);
+// let enter = parseInt(prompt("Угадай число от 1 до 3"));
+// rndNum === enter ? alert("Done!") : alert("Do not");
+
+// function rec(x, n) {
+//   if (n === 1) {
+//     return x;
+//   }
+//   return x * rec(x, n - 1);
+// }
+// console.log(rec(4, 5));
+
+// function calkFr(x, n) {
+//   if (n === 1) {
+//     console.log(x);
+//     return x;
+//   }
+//   console.log(x);
+//   return x * calkFr(x, n - 1);
+// }
+// console.log(calkFr(2, 3));
+
+// function calc(x, n) {
+//   if (n === 1) {
+//     return n;
+//   }
+//   console.log(n);
+//   return x * calc(x, n - 1);
+// }
+// console.log(calc(5, 10) + ":");
+
+// function sumTo(x) {
+//   if (x === 1) {
+//     return x;
+//   }
+//   return x + sumTo(x - 1);
+// }
+// console.log(sumTo(5));

@@ -1,5 +1,5 @@
 /* Сброс стилей */
-/* *,
+ *,
 *::before,
 *::after {
 	margin: 0;
@@ -43,83 +43,75 @@ ul,
 ol {
 	list-style: none;
 }
-*/
+
 body {
-	background-color: #121212;
+	background-color: #0c0c0c;
 	color: rgb(242, 242, 242);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 100;
 }
-/* .container {
+
+.container {
 	display: flex;
 	flex-direction: column;
 }
-.header_title {
-	font-size: 35px;
-	text-align: center;
-	color: rgb(238, 238, 238);
-	margin-bottom: 20px;
-	font-weight: 100;
-}
-.btn_start {
-	left: 100px;
-	margin-left: 260px;
-	margin-bottom: 20px;
+/* 
+.menu{
+	display: flex;
+  justify-content: center;
 }
 
-.column_game {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 1px;
-	border: 1px solid rgb(96, 96, 96);
-	border-radius: 10px;
-
-	background-color: rgb(39, 39, 39);
-}
-
-.cell {
-	margin: 1px;
-	align-items: center;
-	box-sizing: border-box;
-	background-color: rgb(255, 195, 117);
-	border: 3px solid rgb(34, 34, 34);
-	border-radius: 10px;
-	width: 200px;
-	height: 200px;
-	font-size: 120px;
-}
-
-.btn_reset {
-	width: 150px;
-	background-color: #b30000;
+.button{
+	position: relative;
+	display: flex;
 	justify-content: center;
-	font-size: 30px;
-	margin: 30px auto;
-	border: 1px solid rgb(76, 0, 11);
-	border-radius: 10px;
-	text-transform: uppercase;
-	opacity: 40%;
+	background-color: #1a8200;
+	text-align: center;
+	align-items: center;
+	color: rgb(222, 222, 222);
+	border-radius: 2px;
+	margin: 0 auto;
+	padding: 10px;
+	height: 1em;
+	width: 10rem;
+	border: 1px solid rgb(46, 46, 46);
+	font-size: 10px;
 }
 
-.btn_reset:hover {
-	transition: 0.1s;
-	background-color: rgb(255, 43, 10);
-	color: #101010;
-	width: 148px;
-	border: 1px solid rgb(227, 45, 0);
-	opacity: 90%;
-	-webkit-transition: 0.1s;
-	-moz-transition: 0.1s;
-	-ms-transition: 0.1s;
-	-o-transition: 0.1s;
+.text{
+	font-weight: 100;
+	position: absolute;
+	background-color: #4fb700;
+	text-align: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	padding: 2px;
+	width: 100px;
+	margin: 10px auto;
+	border-radius: 2px;
 }
-.btn_reset:active {
-	transition: 0.1s;
-	background-color: rgb(39, 195, 0);
-	color: #ffffff;
-	width: 148px;
-	border: 1px solid rgb(34, 227, 0);
+
+.button-green{
+	background-color: #4fb700;
+}
+
+.text2{
+	position: absolute;
+background-color: #0093e8;
+	text-align: center;
+color: rgb(205, 205, 205);
+	padding: 1px;
+	width: 200px;
+	margin: 20px auto;
+	border-radius: 2px;
+	font-size: 14px;
+}
+/* 
+.textHidden{
+	display: none;
 } */
